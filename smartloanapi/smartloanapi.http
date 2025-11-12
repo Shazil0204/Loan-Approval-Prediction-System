@@ -1,0 +1,6 @@
+@smartloanapi_HostAddress = http://localhost:5191
+
+GET {{smartloanapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
