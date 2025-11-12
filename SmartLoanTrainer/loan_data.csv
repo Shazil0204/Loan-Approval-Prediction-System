@@ -1,0 +1,6 @@
+MonthlyIncome,LoanAmount,ReturnTime,Age,JobType,IsApproved
+4500,20000,24,35,Full-time,true
+3000,15000,36,28,Student,false
+6000,25000,12,40,Part-time,true
+2500,10000,48,22,Unemployed,false
+7000,30000,18,45,Full-time,tru0,,  b e
