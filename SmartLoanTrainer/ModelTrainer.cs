@@ -199,7 +199,7 @@ namespace SmartLoanTrainer
         private static void SimpleModelEvaluation(Microsoft.ML.Data.BinaryClassificationMetrics metrics)
         {
             Console.WriteLine("\n=== SIMPLE MODEL EVALUATION ===");
-            
+
             // Accuracy evaluation
             double accuracy = metrics.Accuracy * 100;
             Console.WriteLine($"\n📊 ACCURACY: {accuracy:F1}%");
@@ -247,7 +247,7 @@ namespace SmartLoanTrainer
             // Overall recommendation
             Console.WriteLine($"\n🎖️  OVERALL ASSESSMENT:");
             double overallScore = (accuracy + auc + f1) / 3;
-            
+
             if (overallScore >= 90)
             {
                 Console.WriteLine("   🌟 EXCELLENT MODEL! Ready for production use.");
