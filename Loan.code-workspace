@@ -1,0 +1,21 @@
+{
+    "folders": [
+        {
+            "path": "smartloanapi"
+        },
+        {
+            "path": "SmartLoanTrainer"
+        },
+        {
+            "path": "frontend"
+        },
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/node_modules": true,
+            "**/dist": true
+        },
+        "editor.formatOnSave": true,
+        "typescript.tsdk": "node_modules/typescript/lib"
+    }
+}
