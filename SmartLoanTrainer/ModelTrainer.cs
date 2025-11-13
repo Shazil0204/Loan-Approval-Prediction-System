@@ -5,7 +5,7 @@ namespace SmartLoanTrainer
     public class ModelTrainer
     {
         private static readonly string dataPath = "loan_data.csv";
-        private static readonly string modelPath = "model.zip";
+        private static readonly string modelPath = Path.Combine("..", "smartloanapi", "model.zip");
 
         public static void Train()
         {
@@ -53,6 +53,19 @@ namespace SmartLoanTrainer
             }
 
             // Save model
+            string? modelDirectory = Path.GetDirectoryName(modelPath);
+            if (!string.IsNullOrEmpty(modelDirectory) && !Directory.Exists(modelDirectory))
+            {
+                Directory.CreateDirectory(modelDirectory);
+                Console.WriteLine($"Created directory: {modelDirectory}");
+            }
+
+            if (File.Exists(modelPath))
+            {
+                File.Delete(modelPath);
+                Console.WriteLine($"Existing model file deleted: {modelPath}");
+            }
+
             mlContext.Model.Save(model, trainData.Schema, modelPath);
             Console.WriteLine($"Model saved to {modelPath}");
         }
